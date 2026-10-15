@@ -1,0 +1,61 @@
+{
+  "name": "pi-omp-tools",
+  "version": "0.1.0",
+  "description": "Standalone pi extension with the OMP file/search tools: unified read, write, hashline edit, ripgrep search, and glob find — with [path#TAG] edit anchors",
+  "type": "module",
+  "keywords": [
+    "pi-extension",
+    "pi-package",
+    "prime-agent",
+    "coding-agent",
+    "read",
+    "write",
+    "edit",
+    "search",
+    "find",
+    "hashline"
+  ],
+  "author": "oinuar",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "files": [
+    "index.ts",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test 'test/*.test.ts'",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "diff": "^9.0.0",
+    "picomatch": "^4.0.2",
+    "tinyglobby": "^0.2.17"
+  },
+  "peerDependencies": {
+    "typebox": "*"
+  },
+  "optionalDependencies": {
+    "@ast-grep/lang-c": "^0.0.5",
+    "@ast-grep/lang-cpp": "^0.0.5",
+    "@ast-grep/lang-go": "^0.0.5",
+    "@ast-grep/lang-java": "^0.0.5",
+    "@ast-grep/lang-json": "^0.0.5",
+    "@ast-grep/lang-python": "^0.0.5",
+    "@ast-grep/lang-rust": "^0.0.5",
+    "@ast-grep/napi": "^0.39.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/picomatch": "^4.0.3",
+    "typescript": "^5.7.0"
+  }
+}
